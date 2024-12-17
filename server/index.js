@@ -17,5 +17,5 @@ app.listen(port, (req, res) => {
 
 mongoose
   .connect(uri)
-  .then(() => console.log('MongoDb connection established'))
-  .catch((error) => console.log('MongoDB connection failed:', error));
+  .then(() => console.log('MongoDB connection established'))
+  .catch((error) => console.log('MongoDB connection failed:', error.message));
