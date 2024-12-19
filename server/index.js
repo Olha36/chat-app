@@ -8,13 +8,11 @@ require('dotenv').config();
 
 app.use(express.json()); // allows to receive and send json data
 app.use(cors());
-app.use('/api/users', userRoute)
+app.use('/api/users', userRoute);
 
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
   res.send('Welcome to our chat app API');
 });
-
-
 
 const port = process.env.PORT || 3000;
 const uri = process.env.ATLAS_URI;
